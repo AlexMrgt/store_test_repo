@@ -1,0 +1,39 @@
+<form class='add-project-form' [formGroup]='myForm' (submit)='onSubmit()'>
+
+
+  <label>
+    <input checked type="radio" value="Complex" formControlName="type">
+      <span>ЖК</span>
+  </label>
+  <label>
+    <input type="radio" value="Quyartal" formControlName="type">
+      <span>Квартал</span>
+  </label>
+  <label>
+    <input type="radio" value="Building" formControlName="type">
+      <span>Дом</span>
+  </label>
+
+  <div class="add-project-form__input-container">
+    <label for="name">
+      Название объекта
+    </label>
+    <input autocomplete="off" placeholder="плейсхолдер" type="text" id="name" formControlName="name" />
+  </div>
+
+  <div class="add-project-form__input-container">
+    <label for="type">Валюта:</label>
+    <select id="currency" formControlName="currency">
+      <option disabled value="null">Выберите валюту</option>
+      <option  *ngFor="let currency of currencies">{{currency}}</option>
+    </select>
+  </div>
+
+
+  <label>
+    <input checked type="checkbox"  formControlName="isCondition">
+      <span>что-то там из ФЗ</span>
+  </label>
+
+</form>
+<div>{{myForm.value|json}}</div>
