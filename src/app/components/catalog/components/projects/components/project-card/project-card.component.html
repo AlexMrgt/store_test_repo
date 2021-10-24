@@ -1,4 +1,6 @@
 <article *ngIf="item" class="card">
+
+  <a [routerLink]="['../project', item.id]" >TO PROJECT</a>
   <h1>{{item.title }}</h1>
   <p>{{item.completed }}</p>
 </article>
