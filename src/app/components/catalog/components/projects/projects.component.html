@@ -1,5 +1,6 @@
 
 <section>
+  <a routerLink="../project" >TO PROJECT</a>
   <app-search></app-search>
   <app-add-project-card></app-add-project-card>
   <app-project-card [item]="item" *ngFor="let item of projects$ | async " ></app-project-card>
